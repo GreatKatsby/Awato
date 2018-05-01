@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+
+  <!--References-->
+  <head>
+    <link href="app.css" rel="StyleSheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+    <!--Create a new container and controller-->
+    <div ng-controller="mainController">
+
+      <!--Tab Links-->
+      <div class="tab">
+        <h1>Awato Project</h1>
+        <button ng-click="showLine()">View Line Plot</button>
+        <button ng-click="showBar()">View Bar Graph</button>
+      </div>
+
+      <!--Line View-->
+      <div class="line">
+        <h3>Line Plot</h3>
+
+        <canvas id="lineChart" ></canvas>
+      </div>
+
+      <!--Bar View-->
+      <div class="bar">
+        <h3>Bar Graph</h3>
+
+        <canvas id="barGraph" ></canvas>
+      </div>
+    </div>
+  </body>
+</html>
